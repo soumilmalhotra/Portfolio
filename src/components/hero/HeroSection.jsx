@@ -23,7 +23,8 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen bg-slate-900 relative overflow-hidden">
+    <section className="min-h-screen w-full bg-slate-900 relative overflow-hidden">
+
       {/* Interactive Background */}
       <div
         className="pointer-events-none absolute -inset-px transition duration-300"
@@ -32,7 +33,8 @@ export default function HeroSection() {
         }}
       />
       
-      <div className="relative z-10 container mx-auto px-6 flex items-center justify-center min-h-screen">
+      <div className="relative z-10 w-full px-6 flex items-center justify-center min-h-screen">
+
         <div className="text-center max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
