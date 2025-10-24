@@ -44,7 +44,6 @@ export default function ProjectsSection() {
       technologies: ["HTML5", "CSS3", "Flexbox", "Grid Layout"],
       type: "Frontend Showcase", 
       color: "bg-gradient-to-r from-red-500 to-pink-600",
-      href: "https://github.com/soumilmalhotra/AmazonProjectNew"
     }
   ];
 

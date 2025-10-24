@@ -26,21 +26,18 @@ export default function ProjectCard({ project, index, href }) {
               </p>
             </div>
             <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-              <Button
-                onClick={() => window.open(`${href}`, "_blank")}
-                size="icon"
-                variant="ghost"
-                className="text-slate-400 hover:text-white hover:bg-slate-800"
-              >
-                <Github className="h-4 w-4" />
-              </Button>
-              {/* <Button
-                size="icon"
-                variant="ghost"
-                className="text-slate-400 hover:text-white hover:bg-slate-800"
-              >
-                <ExternalLink className="h-4 w-4" />
-              </Button> */}
+              {project.href && (
+                <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                  <Button
+                    onClick={() => window.open(project.href, "_blank")}
+                    size="icon"
+                    variant="ghost"
+                    className="text-slate-400 hover:text-white hover:bg-slate-800"
+                  >
+                    <Github className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </CardHeader>
