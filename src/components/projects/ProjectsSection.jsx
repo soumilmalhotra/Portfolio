@@ -15,7 +15,8 @@ export default function ProjectsSection() {
       ],
       technologies: ["React Native", "Expo", "Convex", "OpenAI", "JavaScript"],
       type: "Mobile Application",
-      color: "bg-gradient-to-r from-green-500 to-emerald-600"
+      color: "bg-gradient-to-r from-green-500 to-emerald-600",
+      href: "https://github.com/soumilmalhotra/ai-diet-planner"
     },
     {
       name: "Amazon Clone",
@@ -28,7 +29,8 @@ export default function ProjectsSection() {
       ],
       technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       type: "Web Application",
-      color: "bg-gradient-to-r from-orange-500 to-yellow-600"
+      color: "bg-gradient-to-r from-orange-500 to-yellow-600",
+      href: "https://github.com/soumilmalhotra/AmazonProjectNew"
     },
     {
       name: "YouTube Clone",
@@ -41,7 +43,8 @@ export default function ProjectsSection() {
       ],
       technologies: ["HTML5", "CSS3", "Flexbox", "Grid Layout"],
       type: "Frontend Showcase", 
-      color: "bg-gradient-to-r from-red-500 to-pink-600"
+      color: "bg-gradient-to-r from-red-500 to-pink-600",
+      href: "https://github.com/soumilmalhotra/AmazonProjectNew"
     }
   ];
 
@@ -66,7 +69,7 @@ export default function ProjectsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={project.name} project={project} index={index} />
+            <ProjectCard key={project.name} project={project} index={index} href={project.href} />
           ))}
         </div>
       </div>
