@@ -14,6 +14,10 @@ export default function TechScroller() {
     { name: 'Tailwind CSS', logo: '/logos/tailwind.svg' },
     { name: 'Git', logo: '/logos/git.svg' },
     { name: 'Figma', logo: '/logos/figma.svg' },
+    { name: 'VS Code', logo: '/logos/vscode.svg' },
+    { name: 'Docker', logo: '/logos/docker.svg' },
+    { name: 'Postgresql', logo: '/logos/postgresql.svg' },
+    
   ];
 
   // Offset for last scroller to avoid duplication
