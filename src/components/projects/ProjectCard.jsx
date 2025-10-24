@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project, index, href }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -26,16 +26,22 @@ export default function ProjectCard({ project, index }) {
               </p>
             </div>
             <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-              <Button size="icon" variant="ghost" className="text-slate-400 hover:text-white hover:bg-slate-800">
-                <Github className="h-4 w-4" />
-              </Button>
-              <Button size="icon" variant="ghost" className="text-slate-400 hover:text-white hover:bg-slate-800">
-                <ExternalLink className="h-4 w-4" />
-              </Button>
+              {project.href && (
+                <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
+                  <Button
+                    onClick={() => window.open(project.href, "_blank")}
+                    size="icon"
+                    variant="ghost"
+                    className="text-slate-400 hover:text-white hover:bg-slate-800"
+                  >
+                    <Github className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </CardHeader>
-        
+
         <CardContent>
           <div className="space-y-6">
             {/* Key Features */}
@@ -60,7 +66,10 @@ export default function ProjectCard({ project, index }) {
               </h4>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, idx) => (
-                  <Badge key={idx} className={`${project.color} text-white border-0 px-3 py-1`}>
+                  <Badge
+                    key={idx}
+                    className={`${project.color} text-white border-0 px-3 py-1`}
+                  >
                     {tech}
                   </Badge>
                 ))}
@@ -69,7 +78,10 @@ export default function ProjectCard({ project, index }) {
 
             {/* Project Type */}
             <div className="pt-4 border-t border-slate-700/50">
-              <Badge variant="outline" className="border-slate-600 text-slate-300">
+              <Badge
+                variant="outline"
+                className="border-slate-600 text-slate-300"
+              >
                 {project.type}
               </Badge>
             </div>
