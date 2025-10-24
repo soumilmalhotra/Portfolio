@@ -30,8 +30,8 @@ export default function ContactSection() {
         "service_v4bz8gj", // e.g., service_123abc
         "template_hukvwd4", // e.g., template_xyz
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
           to_email: "malhotrasoumil1@gmail.com",
         },
