@@ -62,7 +62,7 @@ export default function HeroSection() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-                GET S*IT DONE.
+                GET'S IT DONE.
               </p>
             </div>
 
